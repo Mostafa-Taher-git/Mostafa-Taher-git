@@ -162,12 +162,12 @@ A classic **Tetris game built in C++**, representing my interest in game develop
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Mostafa-Taher-git&show_icons=true&hide_border=true&theme=transparent&rank_icon=github" height="180" alt="GitHub stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mostafa-Taher-git&layout=compact&hide_border=true&theme=transparent" height="180" alt="Top languages" />
+<img src="https://github-stats-extended.vercel.app/api?username=Mostafa-Taher-git&show_icons=true&hide_border=true&theme=transparent&rank_icon=github" height="180" alt="GitHub stats" />
+<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Mostafa-Taher-git&layout=compact&hide_border=true&theme=transparent" height="180" alt="Top languages" />
 
 <br />
 
-<img src="https://streak-stats.demolab.com?user=Mostafa-Taher-git&hide_border=true&theme=transparent" width="70%" alt="GitHub streak" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Mostafa-Taher-git&hide_border=true&bg_color=00000000&color=00d9ff&line=00d9ff&point=ffffff&area=true&area_color=00d9ff" width="95%" alt="GitHub activity graph" />
 
 </div>
 
