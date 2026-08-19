@@ -16,7 +16,7 @@
 - 💻 **Software Developer & Multimedia Designer** with a **QA mindset**
 - 🧭 My approach: understand the problem before the stack, ship a working prototype fast, then refine code quality, performance, and visual polish
 - ✅ QA is never an afterthought — manual, API, and performance testing before every delivery
-- 🌐 Portfolio: [mostafa-web-v2.vercel.app](https://mostafa-web-v2.vercel.app/)
+- 🌐 Web: www.mostafa-taher.duckdns.org.
 - 🗣️ Arabic (Native) · English (Good command) · French (Basic)
 - 🟢 **Status: Open to work** — software roles, design roles, and freelance projects
 
@@ -103,8 +103,8 @@
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Mostafa-Taher-git&show_icons=true&theme=tokyonight&title_color=D4AF37&icon_color=D4AF37" height="165"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mostafa-Taher-git&layout=compact&theme=tokyonight&title_color=D4AF37" height="165"/>
+  <img src="https://github-readme-stats.Mostafa.Web.v2/api?username=Mostafa-Taher-git&show_icons=true&theme=tokyonight&title_color=D4AF37&icon_color=D4AF37" height="165"/>
+  <img src="https://github-readme-stats.Mostafa.Web.v2/api/top-langs/?username=Mostafa-Taher-git&layout=compact&theme=tokyonight&title_color=D4AF37" height="165"/>
 </p>
 
 <p align="center">
@@ -114,7 +114,7 @@
 ## 📈 Contribution Activity
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mostafa-Taher-git&theme=tokyo-night&color=D4AF37&line=D4AF37&point=ffffff&area=true&hide_border=false"/>
+  <img src="https://github-readme-activity-graph.Mostafa.Web.v2/graph?username=Mostafa-Taher-git&theme=tokyo-night&color=D4AF37&line=D4AF37&point=ffffff&area=true&hide_border=false"/>
 </p>
 
 ---
