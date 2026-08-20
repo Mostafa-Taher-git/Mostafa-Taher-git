@@ -164,38 +164,22 @@ A classic **Tetris game built in C++**, representing my interest in game develop
 <div align="center">
 
 <a href="https://github.com/Mostafa-Taher-git">
-  <img
-    src="https://github-stats-extended.vercel.app/api?username=Mostafa-Taher-git&show_icons=true&hide_border=true&theme=transparent&rank_icon=github"
-    height="180"
-    alt="Mostafa Taher GitHub Stats"
-  />
+  <img src="https://github-stats-extended.vercel.app/api?username=Mostafa-Taher-git&show_icons=true&hide_border=true&theme=transparent&rank_icon=github" height="180" alt="Mostafa Taher GitHub Stats" />
 </a>
 
 <a href="https://github.com/Mostafa-Taher-git">
-  <img
-    src="https://github-stats-extended.vercel.app/api/top-langs/?username=Mostafa-Taher-git&layout=compact&hide_border=true&theme=transparent"
-    height="180"
-    alt="Mostafa Taher Top Languages"
-  />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Mostafa-Taher-git&layout=compact&hide_border=true&theme=transparent" height="180" alt="Mostafa Taher Top Languages" />
 </a>
 
 <br /><br />
 
-<img
-src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=21&pause=1800&color=00D9FF&center=true&vCenter=true&width=850&height=60&lines=I+don't+chase+code%2C+I+forge+it.;Build.+Break.+Learn.+Repeat.;Every+commit+is+another+step+forward.;Code+is+not+just+written.+It+is+forged."
-alt="Animated Quote"
-/>
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=21&pause=1800&color=00D9FF&center=true&vCenter=true&width=850&height=60&lines=I+don't+chase+code%2C+I+forge+it.;Build.+Break.+Learn.+Repeat.;Every+commit+is+another+step+forward.;Code+is+not+just+written.+It+is+forged." alt="Animated Quote" />
 
 <br /><br />
 
-<img
-src="https://github-readme-activity-graph.vercel.app/graph?username=Mostafa-Taher-git&bg_color=00000000&color=00D9FF&line=00D9FF&point=FFFFFF&area=true&hide_border=true"
-width="95%"
-alt="GitHub Activity Graph"
-/>
+<img src="./assets/dragon-contribution.gif" width="95%" alt="Dragon eating GitHub contributions" />
 
 </div>
-
 ---
 
 ## 🎯 Career Focus
