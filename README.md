@@ -1,7 +1,5 @@
 <div align="center">
-
-<img src="./assets/dragon-banner.png" alt="Mostafa Taher — Sultan of Tech" width="100%" />
-
+  
 <img src="./assets/dragon-divider.png" alt="" width="100%" />
 <!-- ────────────────────────────────  TITLE  ──────────────────────────────── -->
 
