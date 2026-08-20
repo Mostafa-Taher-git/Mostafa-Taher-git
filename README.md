@@ -157,17 +157,25 @@ A classic **Tetris game built in C++**, representing my interest in game develop
 ```
 
 ---
-
-## 📊 GitHub Activity
-
 <div align="center">
 
-<img src="https://github-stats-extended.vercel.app/api?username=Mostafa-Taher-git&show_icons=true&hide_border=true&theme=transparent&rank_icon=github" height="180" alt="GitHub stats" />
-<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Mostafa-Taher-git&layout=compact&hide_border=true&theme=transparent" height="180" alt="Top languages" />
+<img src="https://github-stats-extended.vercel.app/api?username=Mostafa-Taher-git&show_icons=true&hide_border=true&theme=transparent&rank_icon=github" height="180" alt="GitHub stats" /> <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Mostafa-Taher-git&layout=compact&hide_border=true&theme=transparent" height="180" alt="Top languages" />
 
 <br />
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mostafa-Taher-git&hide_border=true&bg_color=00000000&color=00d9ff&line=00d9ff&point=ffffff&area=true&area_color=00d9ff" width="95%" alt="GitHub activity graph" />
+
+<br /><br />
+
+<!-- Animated Quote -->
+
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&pause=1800&color=00D9FF&center=true&vCenter=true&width=850&height=60&lines=I+don't+chase+code%2C+I+forge+it.;Every+commit+is+another+step+forward.;Build.+Break.+Learn.+Repeat.;My+code+is+my+weapon." alt="Animated quote" />
+
+<br />
+
+<!-- Dragon -->
+
+<img src="./assets/dragon-contribution.gif" width="850" alt="Dragon eating my GitHub contributions" />
 
 </div>
 
