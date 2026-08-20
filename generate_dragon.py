@@ -1,33 +1,72 @@
 #!/usr/bin/env python3
-import json, math, os, sys
+"""Dragon contribution eater — Game of Thrones style.
+
+A Drogon-like obsidian dragon (the same beast that guards
+assets/dragon-banner.png) flies across the GitHub contribution calendar and
+burns it away with blue dragonfire.
+
+Usage:
+    DATA=contributions.json OUTPUT=assets/dragon-contribution.gif \
+        SPRITE=assets/dragon-sprite.png python generate_dragon.py
+
+If DATA is missing a demo calendar is generated, so the script can be run
+locally to preview the animation.
+"""
+import json
+import math
+import os
+import random
 from dataclasses import dataclass
-from PIL import Image, ImageDraw, ImageFont
 
-OUT = os.environ.get('OUTPUT', 'assets/dragon-contribution.gif')
-DATA = os.environ.get('DATA', 'contributions.json')
-WIDTH = 1000
-HEIGHT = 270
-BG = (8, 12, 20, 255)
-GRID_X = 70
-GRID_Y = 55
-CELL = 11
-GAP = 3
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
+
+OUT = os.environ.get("OUTPUT", "assets/dragon-contribution.gif")
+DATA = os.environ.get("DATA", "contributions.json")
+SPRITE = os.environ.get("SPRITE", "assets/dragon-sprite.png")
+
+WIDTH, HEIGHT = 1000, 320
+
+# Palette lifted from the banner: obsidian night, dragonfire cyan, ember gold.
+BG_TOP = (7, 11, 22)
+BG_BOTTOM = (12, 18, 34)
+EMBER = (255, 146, 48)
+CYAN = (0, 200, 255)
+ICE = (150, 226, 255)
+WHITE = (226, 240, 255)
+MUTED = (116, 142, 174)
+
+GRID_X, GRID_Y = 62, 118
+CELL, GAP = 11, 3
+
 LEVELS = [
-    (12, 18, 24, 32),
-    (13, 40, 38, 50),
-    (14, 66, 55, 62),
-    (23, 217, 167, 255),
-    (72, 238, 208, 255),
+    (20, 28, 46),
+    (14, 60, 96),
+    (16, 104, 158),
+    (24, 156, 214),
+    (120, 220, 255),
 ]
-CYAN = (0, 217, 255, 255)
-WHITE = (240, 248, 255, 255)
-DARK = (14, 20, 28, 255)
 
-try:
-    font_small = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 12)
-    font_bold = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 18)
-except Exception:
-    font_small = font_bold = ImageFont.load_default()
+DRAGON_H = 132          # rendered dragon height in px
+MOUTH = (0.985, 0.47)   # mouth position as a fraction of the sprite box
+
+
+def _font(names, size):
+    for name in names:
+        try:
+            return ImageFont.truetype(name, size)
+        except Exception:
+            continue
+    return ImageFont.load_default()
+
+
+SERIF_B = ["/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"]
+SANS = ["/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"]
+SANS_B = ["/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"]
+
+font_title = _font(SERIF_B, 20)
+font_small = _font(SANS, 11)
+font_label = _font(SANS_B, 11)
+
 
 @dataclass
 class Day:
@@ -37,136 +76,162 @@ class Day:
 
 
 def load_days(path):
-    with open(path, 'r', encoding='utf-8') as f:
+    if not os.path.exists(path):
+        random.seed(11)
+        return [
+            Day(f"demo-{i}", random.randint(0, 16), random.choice([0, 0, 1, 1, 2, 2, 3, 4]))
+            for i in range(371)
+        ]
+    with open(path, "r", encoding="utf-8") as f:
         raw = json.load(f)
-    return [Day(d['date'], int(d['count']), int(d.get('level', 0))) for d in raw]
+    return [Day(d["date"], int(d["count"]), int(d.get("level", 0))) for d in raw]
 
 
 def build_grid(days):
-    # GitHub calendar data is returned chronologically. Pad so the final 7-day
-    # column alignment is preserved, then cap at 53 columns.
     if not days:
         return []
-    n = len(days)
-    pad = (7 - (n % 7)) % 7
+    pad = (7 - (len(days) % 7)) % 7
     padded = [None] * pad + days
-    cols = []
-    for i in range(0, len(padded), 7):
-        cols.append(padded[i:i+7])
+    cols = [padded[i:i + 7] for i in range(0, len(padded), 7)]
     return cols[-53:]
 
 
 def contribution_color(level):
-    if level <= 0:
-        return (22, 27, 34, 255)
-    idx = min(level, 4) + 0
-    return LEVELS[idx][0:4]
+    return LEVELS[max(0, min(level, 4))]
 
 
-def dragon_points(cx, cy, scale=1.0):
-    # Compact pixel-ish dragon silhouette; deliberately uses vector primitives
-    # so no external image asset is required.
-    s = scale
-    body = [
-        (cx - 30*s, cy + 5*s), (cx - 20*s, cy - 10*s),
-        (cx - 3*s, cy - 9*s), (cx + 7*s, cy - 18*s),
-        (cx + 24*s, cy - 13*s), (cx + 32*s, cy - 3*s),
-        (cx + 24*s, cy + 8*s), (cx + 8*s, cy + 10*s),
-        (cx - 3*s, cy + 18*s), (cx - 20*s, cy + 19*s)
-    ]
-    wing = [(cx - 2*s, cy - 7*s), (cx + 7*s, cy - 35*s),
-            (cx + 26*s, cy - 25*s), (cx + 14*s, cy - 10*s)]
-    tail = [(cx - 22*s, cy + 12*s), (cx - 40*s, cy + 20*s),
-            (cx - 32*s, cy + 7*s), (cx - 48*s, cy + 4*s),
-            (cx - 24*s, cy - 1*s)]
-    head = [(cx + 16*s, cy - 5*s), (cx + 33*s, cy - 15*s),
-            (cx + 52*s, cy - 9*s), (cx + 58*s, cy + 2*s),
-            (cx + 48*s, cy + 12*s), (cx + 30*s, cy + 10*s)]
-    jaw = [(cx + 44*s, cy + 7*s), (cx + 61*s, cy + 10*s),
-           (cx + 50*s, cy + 18*s), (cx + 36*s, cy + 13*s)]
-    return body, wing, tail, head, jaw
+def load_sprite():
+    img = Image.open(SPRITE).convert("RGBA")
+    bbox = img.getbbox()
+    if bbox:
+        img = img.crop(bbox)
+    scale = DRAGON_H / img.height
+    return img.resize((max(1, int(img.width * scale)), DRAGON_H), Image.LANCZOS)
 
 
-def draw_dragon(draw, cx, cy, scale=1.0, facing=1, bite=False):
-    # Mirror horizontally when facing left.
-    parts = dragon_points(cx, cy, scale)
-    if facing == -1:
-        parts = [[(2*cx-x, y) for x, y in pts] for pts in parts]
-    body, wing, tail, head, jaw = parts
-    draw.polygon(body, fill=(17, 196, 155, 255), outline=(0, 242, 210, 255))
-    draw.polygon(wing, fill=(13, 150, 135, 255), outline=(0, 242, 210, 255))
-    draw.polygon(tail, fill=(12, 152, 126, 255), outline=(0, 220, 190, 255))
-    draw.polygon(head, fill=(34, 220, 179, 255), outline=(0, 242, 210, 255))
-    draw.polygon(jaw, fill=(21, 188, 151, 255), outline=(0, 242, 210, 255))
-    eye_x = cx + 45*scale*facing
-    draw.ellipse((eye_x-2*scale, cy-9*scale, eye_x+3*scale, cy-4*scale), fill=(255, 255, 255, 255))
-    draw.ellipse((eye_x+1*scale, cy-8*scale, eye_x+3*scale, cy-5*scale), fill=(5, 10, 15, 255))
-    if bite:
-        mouth_x = cx + 55*scale*facing
-        for i in range(3):
-            x = mouth_x + i*8*scale*facing
-            draw.line((x, cy+11*scale, x-4*scale*facing, cy+3*scale), fill=(255, 236, 140, 255), width=max(1, int(2*scale)))
-        draw.ellipse((mouth_x-4*scale, cy+10*scale, mouth_x+6*scale, cy+20*scale), fill=(255, 178, 40, 210))
+def breathe(canvas, x, y, facing, phase, length=120):
+    """Blue dragonfire jet leaving the dragon's jaws."""
+    fire = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
+    fd = ImageDraw.Draw(fire)
+    for i in range(14):
+        t = i / 13
+        fx = x + facing * (6 + t * length)
+        fy = y + math.sin(phase * 1.6 + t * 3.4) * 7 + t * 10
+        r = (13 - i * 0.75) * (1.0 + 0.12 * math.sin(phase * 3))
+        a = int(230 - t * 190)
+        fd.ellipse((fx - r, fy - r, fx + r, fy + r),
+                   fill=(90 + int(t * 140), 200 + int(t * 50), 255, max(0, a)))
+    canvas.alpha_composite(fire.filter(ImageFilter.GaussianBlur(4)))
+
+
+def background():
+    bg = Image.new("RGBA", (WIDTH, HEIGHT))
+    d = ImageDraw.Draw(bg)
+    for y in range(HEIGHT):
+        t = y / HEIGHT
+        d.line([(0, y), (WIDTH, y)], fill=(
+            int(BG_TOP[0] + (BG_BOTTOM[0] - BG_TOP[0]) * t),
+            int(BG_TOP[1] + (BG_BOTTOM[1] - BG_TOP[1]) * t),
+            int(BG_TOP[2] + (BG_BOTTOM[2] - BG_TOP[2]) * t), 255))
+
+    haze = Image.new("RGBA", (WIDTH, HEIGHT), (0, 0, 0, 0))
+    hd = ImageDraw.Draw(haze)
+    hd.ellipse((-220, HEIGHT - 46, WIDTH + 220, HEIGHT + 130), fill=(255, 118, 26, 64))
+    hd.ellipse((-180, 150, 460, 340), fill=(0, 128, 220, 40))
+    hd.ellipse((640, -80, 1180, 180), fill=(0, 110, 200, 34))
+    bg.alpha_composite(haze.filter(ImageFilter.GaussianBlur(46)))
+
+    d = ImageDraw.Draw(bg)
+    d.rectangle((6, 6, WIDTH - 7, HEIGHT - 7), outline=(28, 56, 92), width=1)
+    d.line((6, 6, 210, 6), fill=CYAN, width=2)
+    d.line((WIDTH - 211, HEIGHT - 8, WIDTH - 7, HEIGHT - 8), fill=EMBER, width=2)
+
+    d.text((GRID_X, 28), "THE DRAGON FEEDS", font=font_title, fill=WHITE)
+    d.text((GRID_X, 56), "MOSTAFA  TAHER   ·   SULTAN  OF  TECH", font=font_small, fill=MUTED)
+    return bg
 
 
 def main():
-    os.makedirs(os.path.dirname(OUT) or '.', exist_ok=True)
-    days = load_days(DATA)
-    cols = build_grid(days)
+    cols = build_grid(load_days(DATA))
     if not cols:
-        raise SystemExit('No contribution data found')
+        raise SystemExit("no contribution data")
 
-    # Flatten contribution cells in serpentine order so the dragon visibly
-    # travels through the calendar rather than only across one row.
+    sprite = load_sprite()
+    sprite_flip = sprite.transpose(Image.FLIP_LEFT_RIGHT)
+
     path = []
     for x, col in enumerate(cols):
         rows = range(7) if x % 2 == 0 else range(6, -1, -1)
         for y in rows:
             if col[y] is not None:
                 path.append((x, y))
+    sampled = path[::8]
 
-    # 2 passes, skipping some empty cells to keep the GIF small.
-    sampled = path[::3]
-    frames = []
-    durations = []
+    bg = background()
+    frames, durations = [], []
     eaten = set()
-    for frame_index, (gx, gy) in enumerate(sampled):
+    burned = 0
+
+    for i, (gx, gy) in enumerate(sampled):
         eaten.add((gx, gy))
-        img = Image.new('RGBA', (WIDTH, HEIGHT), BG)
+        day = cols[gx][gy]
+        burned += day.count if day else 0
+
+        img = bg.copy()
         d = ImageDraw.Draw(img)
-        d.text((GRID_X, 14), 'GITHUB CONTRIBUTIONS', font=font_bold, fill=WHITE)
-        d.text((GRID_X + 235, 18), '🐉 DRAGON MODE', font=font_small, fill=(0, 217, 255, 255))
+
         for x, col in enumerate(cols):
             for y in range(7):
                 px = GRID_X + x * (CELL + GAP)
                 py = GRID_Y + y * (CELL + GAP)
-                day = col[y]
-                level = day.level if day else 0
-                color = contribution_color(level)
+                cell = col[y]
                 if (x, y) in eaten:
-                    color = (7, 18, 24, 255)
-                d.rounded_rectangle((px, py, px+CELL, py+CELL), radius=2, fill=color)
-                if (x, y) in eaten and day and day.count > 0:
-                    d.line((px+2, py+CELL-3, px+CELL-3, py+2), fill=(0, 90, 110, 255), width=1)
-        dx = GRID_X + gx * (CELL + GAP) + 8
-        dy = GRID_Y + gy * (CELL + GAP) + 6
+                    d.rounded_rectangle((px, py, px + CELL, py + CELL), radius=2,
+                                        fill=(13, 17, 30), outline=(30, 48, 74))
+                    if cell and cell.count:
+                        d.line((px + 3, py + CELL - 3, px + CELL - 3, py + 3),
+                               fill=(56, 94, 132), width=1)
+                else:
+                    d.rounded_rectangle((px, py, px + CELL, py + CELL), radius=2,
+                                        fill=contribution_color(cell.level if cell else 0))
+
+        gx_px = GRID_X + gx * (CELL + GAP) + CELL // 2
+        gy_px = GRID_Y + gy * (CELL + GAP) + CELL // 2
         facing = 1 if (gx % 2 == 0) else -1
-        # pulse scale during bite
-        pulse = 1.0 + 0.08 * math.sin(frame_index * 0.9)
-        draw_dragon(d, dx, dy, scale=pulse, facing=facing, bite=True)
-        d.text((GRID_X, HEIGHT-30), f'{sum(1 for _ in eaten)} contributions consumed', font=font_small, fill=(170, 190, 205, 255))
-        frames.append(img.convert('P', palette=Image.Palette.ADAPTIVE, colors=128))
+
+        # Wing-beat bob.
+        bob = math.sin(i * 0.6) * 5
+        art = sprite if facing == 1 else sprite_flip
+        mouth_dx = (MOUTH[0] if facing == 1 else 1 - MOUTH[0]) * art.width
+        mouth_dy = MOUTH[1] * art.height
+        mouth_x = gx_px - facing * 96
+        mouth_y = gy_px - 14 + bob
+        ox = min(max(int(mouth_x - mouth_dx), 8), WIDTH - art.width - 8)
+        mouth_x = ox + mouth_dx
+        img.alpha_composite(art, (ox, int(mouth_y - mouth_dy)))
+        breathe(img, mouth_x, mouth_y, facing, i * 0.7,
+                length=max(30.0, abs(gx_px - mouth_x) + 14))
+
+        d = ImageDraw.Draw(img)
+        d.text((GRID_X, HEIGHT - 36), f"{len(eaten)} DAYS CONSUMED", font=font_label, fill=ICE)
+        d.text((GRID_X + 160, HEIGHT - 36), f"{burned} CONTRIBUTIONS BURNED",
+               font=font_small, fill=MUTED)
+        d.text((WIDTH - 250, HEIGHT - 36), "BUILD · BREAK · LEARN · REPEAT",
+               font=font_small, fill=MUTED)
+
+        frames.append(img.convert("RGB").convert(
+            "P", palette=Image.Palette.ADAPTIVE, colors=128))
         durations.append(70)
 
-    # Final hold.
-    for _ in range(4):
+    for _ in range(6):
         frames.append(frames[-1])
-        durations.append(150)
+        durations.append(140)
 
-    frames[0].save(OUT, save_all=True, append_images=frames[1:], duration=durations,
-                   loop=0, optimize=False, disposal=2)
-    print(f'Wrote {OUT} ({os.path.getsize(OUT):,} bytes, {len(frames)} frames)')
+    os.makedirs(os.path.dirname(OUT) or ".", exist_ok=True)
+    frames[0].save(OUT, save_all=True, append_images=frames[1:],
+                   duration=durations, loop=0, optimize=True, disposal=2)
+    print(f"Wrote {OUT} ({os.path.getsize(OUT):,} bytes, {len(frames)} frames)")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
