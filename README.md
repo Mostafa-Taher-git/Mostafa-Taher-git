@@ -3,7 +3,7 @@
 <img src="./assets/dragon-divider.png" alt="" width="100%" />
 <!-- ────────────────────────────────  TITLE  ──────────────────────────────── -->
 
-<img src="https://readme-typing-svg.demolab.com/?font=Cinzel&weight=700&size=34&pause=2000&color=4FC3F7&center=true&vCenter=true&width=900&height=64&lines=MOSTAFA+TAHER+AHMED;" alt="Mostafa Taher Ahmed" />
+<img src="https://readme-typing-svg.demolab.com/?font=Cinzel&weight=700&size=34&pause=2000&color=4FC3F7&center=true&vCenter=true&width=900&height=64&lines=MOSTAFA+TAHER+AHMED+MOHAMED;" alt="Mostafa Taher Ahmed Mohamed" />
 
 **`SOFTWARE DEVELOPER`** · **`QA-MINDED BUILDER`** · **`WEB & APP DEVELOPER`** · **`TECH EXPLORER`**
 
@@ -104,7 +104,8 @@ IT support workflows turned into a structured software system — tickets, suppo
 <tr>
 <td width="50%" valign="top">
 
-### 🐲 [FAM-OS](https://github.com/Mostafa-Taher-git/FAM-OS)
+### <img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/76d934d1-791f-4ece-8ea7-aa21ae5fbeff" />
+ [FAM-OS](https://github.com/Mostafa-Taher-git/FAM-OS)
 **AuraOS-CAMS — an AI-first Arch Linux distribution** focused on developers, performance and productivity. Going below the application layer.
 
 `Linux` `Arch` `Shell` `System Design`
@@ -174,9 +175,9 @@ A classic **Tetris built in C++** — game loops, collision, rendering and core 
 
 ## <img src="./assets/dragon-sigil.png" height="28" align="center" alt="" /> &nbsp;CAREER FOCUS
 
-I'm building my career around roles that combine **software development, troubleshooting, quality assurance and systems thinking**.
+I'm building my career around roles that combine **software development, troubleshooting, quality assurance and critical thinking**.
 
-`Software Development` · `QA / Software Testing` · `IT / Technical Support` · `Web Development` · `Systems` · `Game Development`
+`Software Development` · `QA / Software Testing` · `IT / Technical Support` · `Web Development` · `Game Development`
 
 <div align="center">
 
@@ -192,7 +193,7 @@ I'm building my career around roles that combine **software development, trouble
 
 > **Build. Learn. Create. Share.**
 >
-> **I love dragons. I love technology.**
+> **I love technology.**
 >
 > ⚔️ **I AM THE SWORD.**
 
@@ -202,6 +203,6 @@ I'm building my career around roles that combine **software development, trouble
 
 <img src="./assets/dragon-divider.png" alt="" width="100%" />
 
-**🐉 Thanks for visiting. Keep building.**
+**🐉 Thanks for visiting.**
 
 </div>
