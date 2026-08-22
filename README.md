@@ -193,8 +193,6 @@ I'm building my career around roles that combine **software development, trouble
 > **Build. Learn. Create. Share.**
 >
 > **I love technology.**
->
-> ⚔️ **I AM THE SWORD.**
 
 <br />
 
@@ -202,6 +200,6 @@ I'm building my career around roles that combine **software development, trouble
 
 <img src="./assets/dragon-divider.png" alt="" width="100%" />
 
-**🐉 Thanks for visiting.**
+**🤗 Thanks for visiting.**
 
 </div>
