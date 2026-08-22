@@ -104,7 +104,7 @@ IT support workflows turned into a structured software system — tickets, suppo
 <tr>
 <td width="50%" valign="top">
 
-### <img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/76d934d1-791f-4ece-8ea7-aa21ae5fbeff" />
+### <img width="32" height="32" alt="image" src="https://github.com/user-attachments/assets/76d934d1-791f-4ece-8ea7-aa21ae5fbeff" />
  [FAM-OS](https://github.com/Mostafa-Taher-git/FAM-OS)
 **AuraOS-CAMS — an AI-first Arch Linux distribution** focused on developers, performance and productivity. Going below the application layer.
 
