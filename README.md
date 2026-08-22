@@ -84,7 +84,7 @@ AI-powered workflows, tools and automation that make software genuinely more use
 <tr>
 <td width="50%" valign="top">
 
-### 🐉 [LittleTech](https://github.com/Mostafa-Taher-git/LittleTech)
+### <img width="24" height="24" alt="image" src="https://github.com/user-attachments/assets/a84d7136-da3c-4cea-bd88-f86523cfaf8f" /> [LittleTech](https://github.com/Mostafa-Taher-git/LittleTech)
 **Gamified troubleshooting learning platform, built with Flutter.**
 14 troubleshooting worlds, 400+ procedural levels, boss battles, progression systems, local accounts and an offline-first architecture.
 
