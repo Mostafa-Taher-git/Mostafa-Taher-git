@@ -184,7 +184,7 @@ I'm building my career around roles that combine **software development, trouble
 
 ## ENTER MY WORLD
 
-**🌐 [www.mostafa-taher.duckdns.org](https://www.mostafa-taher.duckdns.org)** &nbsp;·&nbsp; **[<img width="24" height="24" alt="image" src="https://github.com/user-attachments/assets/f0bf44fc-135f-4462-8d01-cfc837dd4821" />](https://icons8.com/icon/12599/github) [github.com/Mostafa-Taher-git](https://github.com/Mostafa-Taher-git)**
+**🌐 [www.mostafa-taher.duckdns.org](https://www.mostafa-taher.duckdns.org)** &nbsp;·&nbsp; **https://icons8.com/icon/12599/github(https://icons8.com/icon/12599/github) [github.com/Mostafa-Taher-git](https://github.com/Mostafa-Taher-git)**
 
 <br />
 
