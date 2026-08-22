@@ -160,22 +160,7 @@ A classic **Tetris built in C++** — game loops, collision, rendering and core 
 <a href="https://github.com/Mostafa-Taher-git">
   <img src="https://github-readme-stats.vercel.app/api?username=Mostafa-Taher-git&show_icons=true&hide_border=true&rank_icon=github&bg_color=070B16&title_color=00C8FF&text_color=BFD6EA&icon_color=FF9230" height="170" alt="Mostafa Taher GitHub Stats" />
 </a>
-<p align="center">
-  <a href="https://github.com/Mostafa-Taher-git">
-    <img
-      src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mostafa-Taher-git&layout=compact&hide_border=true&bg_color=070B16&title_color=00C8FF&text_color=BFD6EA"
-      height="170"
-      alt="Top Languages"
-    />
-  </a>
-</p>
-
-<p align="center">
-  <img
-    src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1800&color=00C8FF&center=true&vCenter=true&width=880&height=52&lines=I+don%27t+chase+code%2C+I+forge+it.;Build.+Break.+Learn.+Repeat.;Every+commit+is+another+step+forward.;Code+is+not+just+written.+It+is+forged."
-    alt="Animated Quote"
-  />
-</p>
+<a href="https://github.com/Mostafa-Taher-git"> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mostafa-Taher-git&layout=compact&hide_border=true&bg_color=070B16&title_color=00C8FF&text_color=BFD6EA" height="170" alt="Top Languages" /> </a> <br /><br /> <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=20&pause=1800&color=00C8FF&center=true&vCenter=true&width=880&height=52&lines=I+don't+chase+code%2C+I+forge+it.;Build.+Break.+Learn.+Repeat.;Every+commit+is+another+step+forward.;Code+is+not+just+written.+It+is+forged." alt="Animated Quote" />
 
 <img src="./assets/dragon-divider.png" alt="" width="90%" />
 
