@@ -93,7 +93,7 @@ AI-powered workflows, tools and automation that make software genuinely more use
 </td>
 <td width="50%" valign="top">
 
-### 🛡️ [OpsDesk](https://github.com/Mostafa-Taher-git/OpsDesk)
+### <img width="24" height="24" alt="MKINDAYZIR_logo" src="https://github.com/user-attachments/assets/2ce22161-6064-4b75-b7a5-57cdaa27c96c" /> [Mkindayzir](https://github.com/Mostafa-Taher-git/Mkindayzir.git)
 **Helpdesk / IT operations platform.**
 IT support workflows turned into a structured software system — tickets, support operations and service-management concepts.
 
