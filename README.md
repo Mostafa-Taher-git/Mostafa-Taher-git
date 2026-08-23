@@ -129,7 +129,7 @@ A classic **Tetris built in C++** — game loops, collision, rendering and core 
 
 **LANGUAGES**
 
-<img src="https://skillicons.dev/icons?i=cpp,cs,java,js,php,python,dart,sql&theme=dark" alt="Languages" />
+<img src="https://skillicons.dev/icons?i=cpp,cs,java,js,python,dart,sql&theme=dark" alt="Languages" />
 
 **WEB & APPLICATION**
 
