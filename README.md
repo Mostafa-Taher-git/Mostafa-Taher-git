@@ -131,13 +131,17 @@ A classic **Tetris built in C++** — game loops, collision, rendering and core 
 
 <img src="https://skillicons.dev/icons?i=cpp,cs,java,js,python,dart,sql&theme=dark" alt="Languages" />
 
-**WEB & APPLICATION**
+**Framework**
 
 <img src="https://skillicons.dev/icons?i=html,css,js,flutter,electron,nodejs&theme=dark" alt="Web and application technologies" />
 
-**DATABASES & TOOLS**
+**DATABASES**
 
-<img src="https://skillicons.dev/icons?i=sqlite,mysql,git,github,vscode,postman,jira,linux&theme=dark" alt="Tools" />
+<img src="https://skillicons.dev/icons?i=sqlite,mysql,postgresql,isar&theme=dark" alt="Tools" />
+
+**OS & TOOLS**
+
+<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,Jira,docker,linux,Windows&theme=dark" alt="Tools" />
 
 **TESTING & ENGINEERING**
 
