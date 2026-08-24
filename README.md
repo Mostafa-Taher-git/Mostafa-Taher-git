@@ -141,16 +141,16 @@ A classic **Tetris built in C++** — game loops, collision, rendering and core 
 
 **OS & TOOLS**
 
-<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,Jira,docker,linux,Windows&theme=dark" alt="Tools" />
+<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,docker,linux,Windows&theme=dark" alt="Tools" />
 
 **TESTING & ENGINEERING**
 
 ![Manual Testing](https://img.shields.io/badge/Manual%20Testing-070B16?style=flat-square&labelColor=070B16&color=0F2338)
 ![API Testing](https://img.shields.io/badge/API%20Testing-070B16?style=flat-square&labelColor=070B16&color=0F2338)
+![Performance Testing](https://img.shields.io/badge/Performance%20Testing-070B16?style=flat-square&labelColor=070B16&color=0F2338)
+![Test Automation](https://img.shields.io/badge/Test%20Automation-070B16?style=flat-square&labelColor=070B16&color=0F2338)
 ![Debugging](https://img.shields.io/badge/Debugging-070B16?style=flat-square&labelColor=070B16&color=0F2338)
-![QA](https://img.shields.io/badge/QA-070B16?style=flat-square&labelColor=070B16&color=0F2338)
 ![JIRA](https://img.shields.io/badge/JIRA-070B16?style=flat-square&labelColor=070B16&color=0F2338)
-![Postman](https://img.shields.io/badge/Postman-070B16?style=flat-square&labelColor=070B16&color=0F2338)
 ![Agile](https://img.shields.io/badge/Agile%20%2F%20Scrum-070B16?style=flat-square&labelColor=070B16&color=0F2338)
 
 <img src="./assets/dragon-divider.png" alt="" width="90%" />
