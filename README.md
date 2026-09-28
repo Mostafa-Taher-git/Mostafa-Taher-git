@@ -104,8 +104,8 @@ IT support workflows turned into a structured software system — tickets, suppo
 <tr>
 <td width="50%" valign="top">
 
-### <img width="24" height="24" alt="image" src="https://github.com/user-attachments/assets/835e6611-6c6d-4a65-9509-c27a9fbd298e" /> [Greeneek](https://github.com/Mostafa-Taher-git/Greeneek.git)
-*Greeneek is an open-source agent harness (gnk)** It is built on an everything-is-a-plugin architecture. Going below the application layer.
+### <img width="24" height="24" alt="apps/web/public/assets/logo-mark.png" src="https://github.com/user-attachments/assets/835e6611-6c6d-4a65-9509-c27a9fbd298e" /> [Greeneek](https://github.com/Mostafa-Taher-git/Greeneek.git)
+*Greeneek is an open-source agent harness (gnk)** It is built on an everything-is-a-plugin architecture.
 
 `TypeScript` 
 
