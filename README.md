@@ -129,19 +129,23 @@ A classic **Tetris built in C++** — game loops, collision, rendering and core 
 
 **LANGUAGES**
 
-<img src="https://skillicons.dev/icons?i=cpp,cs,java,js,python,dart,sql&theme=dark" alt="Languages" />
+<img src="https://skillicons.dev/icons?i=cpp,cs,java,js,ts,python,dart,sql&theme=dark" alt="Languages" />
 
 **Framework**
 
-<img src="https://skillicons.dev/icons?i=html,css,js,flutter,electron,nodejs&theme=dark" alt="Web and application technologies" />
+<img src="https://skillicons.dev/icons?i=html,css,js,flutter,electron,nodejs,flask&theme=dark" alt="Web and application technologies" />
 
 **DATABASES**
 
-<img src="https://skillicons.dev/icons?i=sqlite,mysql,postgresql,isar&theme=dark" alt="Tools" />
+<img src="https://skillicons.dev/icons?i=sqlite,mysql,postgresql&theme=dark" alt="Databases" />
 
 **OS & TOOLS**
 
-<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,docker,linux,Windows&theme=dark" alt="Tools" />
+<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,docker,linux,windows&theme=dark" alt="OS and tools" />
+
+**GAME ENGINES**
+
+<img src="https://skillicons.dev/icons?i=godot,unity&theme=dark" alt="Game engines" />
 
 **TESTING & ENGINEERING**
 
