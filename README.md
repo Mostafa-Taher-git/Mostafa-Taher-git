@@ -97,7 +97,7 @@ AI-powered workflows, tools and automation that make software genuinely more use
 **Helpdesk / IT operations platform.**
 IT support workflows turned into a structured software system — tickets, support operations and service-management concepts.
 
-`Python` `IT Operations` `Helpdesk` `Support Systems`
+`TypeScript` `Python` `IT Operations` `Helpdesk` `Support Systems`
 
 </td>
 </tr>
@@ -116,6 +116,25 @@ IT support workflows turned into a structured software system — tickets, suppo
 A classic **Tetris built in C++** — game loops, collision, rendering and core programming from the ground up.
 
 `C++` `Game Development`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🌙 [Luna-Quest](https://github.com/Mostafa-Taher-git/Luna-Quest)
+**A living Moon colony — three engines, one simulation.**
+30 Earth days on the Shackleton rim, every resource tied to the second. One shared C# core drives Godot .NET, Godot GDScript and Unity: deterministic one-second step, driveable crew rover under 1.62 m/s² lunar gravity, real CC0 / Poly Haven / NASA surface art. Guarded by 426 simulation checks, a 659-check headless self-test and a 238-check scene audit. English and Arabic.
+
+`C#` `GDScript` `Godot 4.7` `Unity 6.3` `Deterministic Sim` `QA`
+
+</td>
+<td width="50%" valign="top">
+
+### 🥚 The rest of the hoard
+Every egg, hatchling and full-grown wyrm lives in the repositories — including the portfolio you are one click away from.
+
+**[Browse all repositories →](https://github.com/Mostafa-Taher-git?tab=repositories)**
 
 </td>
 </tr>
