@@ -27,7 +27,9 @@
 
 I'm **Mostafa Taher**, a Computer & Artificial Intelligence graduate from **MTI University (2025)**, building practical software across development, testing, systems and the web.
 
-I work where **software engineering meets problem solving**: shape an idea, turn it into a working product, test it, harden it, and learn from every failure along the way.
+I work where **software engineering meets problem solving**: shape an idea, turn it into a working product, test it, harden it, and learn from every failure along the way. Full-stack development with a **QA background** — I build it, then I make sure it doesn't fall apart.
+
+Alongside code I'm a **Mechatronics Engineer & Instructor (part-time) at EDU-X**, training students in robotics, supporting R&D projects and coaching competition teams.
 
 ```text
 ◆ CURRENT FLIGHT PATH
@@ -36,7 +38,8 @@ I work where **software engineering meets problem solving**: shape an idea, turn
 ├── 🌐  Web Development
 ├── 🖥️  IT & Systems
 ├── 🤖  AI & Automation
-└── 🎮  Game Development
+├── 🎮  Game Development
+└── 🦾  Mechatronics & Robotics Teaching
 ```
 
 > **Philosophy** — Understand the problem first. Build the solution second. Polish it until it feels right.
@@ -84,42 +87,15 @@ AI-powered workflows, tools and automation that make software genuinely more use
 <tr>
 <td width="50%" valign="top">
 
-### <img width="24" height="24" alt="icon" src="https://github.com/user-attachments/assets/9d8e1f5b-a3da-4c60-8834-6bfdbbc93477" />[LittleTech](https://github.com/Mostafa-Taher-git/LittleTech)
-**Gamified troubleshooting learning platform, built with Flutter.**
-14 troubleshooting worlds, 400+ procedural levels, boss battles, progression systems, local accounts and an offline-first architecture.
+### 💈 Roby Barber
+**Arabic-first Windows desktop app — a barber shop, end to end.**
+Queue, POS checkout with thermal receipts, payroll with commission/tips/advances, inventory with stock alerts, customer loyalty and WhatsApp integration. Fully offline: no server, no subscriptions. A custom Electron-run **226-check** smoke suite gates every release against real SQLite; **RSA-2048** machine-bound offline licensing with encrypted keys, clock-rollback detection and transfer protection; incremental backups every 10 minutes and on exit with one-click restore.
 
-`Flutter` `Dart` `BLoC` `Isar` `Clean Architecture`
+`Electron` `SQLite` `Vanilla JS` `Offline Licensing` `Automated QA`
 
-</td>
-<td width="50%" valign="top">
-
-### <img width="24" height="24" alt="MKINDAYZIR_logo" src="https://github.com/user-attachments/assets/2ce22161-6064-4b75-b7a5-57cdaa27c96c" /> [Mkindayzir](https://github.com/Mostafa-Taher-git/Mkindayzir.git)
-**Helpdesk / IT operations platform.**
-IT support workflows turned into a structured software system — tickets, support operations and service-management concepts.
-
-`TypeScript` `Python` `IT Operations` `Helpdesk` `Support Systems`
+*Freelance client build · 10/2026 – Present · source not public*
 
 </td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/f854005d-2f49-4936-b30b-6e11e6f85b1d" /> [Greeneek](https://github.com/Mostafa-Taher-git/Greeneek.git)
-*Greeneek is an open-source agent harness (gnk)** It is built on an everything-is-a-plugin architecture.
-
-`TypeScript` 
-
-</td>
-<td width="50%" valign="top">
-
-### 🎮 [Tetris — C++](https://github.com/Mostafa-Taher-git/Tetris--c--)
-A classic **Tetris built in C++** — game loops, collision, rendering and core programming from the ground up.
-
-`C++` `Game Development`
-
-</td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 ### 🌙 [Luna-Quest](https://github.com/Mostafa-Taher-git/Luna-Quest)
@@ -129,7 +105,50 @@ A classic **Tetris built in C++** — game loops, collision, rendering and core 
 `C#` `GDScript` `Godot 4.7` `Unity 6.3` `Deterministic Sim` `QA`
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
+
+### <img width="24" height="24" alt="MKINDAYZIR_logo" src="https://github.com/user-attachments/assets/2ce22161-6064-4b75-b7a5-57cdaa27c96c" /> [Mkindayzir](https://github.com/Mostafa-Taher-git/Mkindayzir)
+**Self-hosted, local-first "Work OS".**
+Project management, visual task boards, a knowledge vault and AI assistance in one independently deployable app. Async FastAPI + SQLAlchemy 2.0 + Alembic on PostgreSQL; session auth with AES-256-GCM encryption for stored API keys; React/Vite/TanStack Query/Zustand SPA served by a single FastAPI process in Docker.
+
+`FastAPI` `SQLAlchemy 2.0` `PostgreSQL` `React` `Docker` `AES-256-GCM`
+
+</td>
+<td width="50%" valign="top">
+
+### <img width="24" height="24" alt="icon" src="https://github.com/user-attachments/assets/9d8e1f5b-a3da-4c60-8834-6bfdbbc93477" />[LittleTech](https://github.com/Mostafa-Taher-git/LittleTech)
+**Gamified troubleshooting learning platform, built with Flutter.**
+14 domains and 400+ procedurally generated levels driven by a custom expert-system rule engine mapping ~200 real problem keywords to step-by-step diagnostics. Boss battles, points/streak/achievements and cosmetics, all earned through play. 100% offline Isar with encrypted multi-user isolation, state via Cubit.
+
+`Flutter` `Dart` `Cubit` `Isar` `Rule Engine`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/f854005d-2f49-4936-b30b-6e11e6f85b1d" /> [Greeneek](https://github.com/Mostafa-Taher-git/Greeneek)
+**Open-source agent harness (`gnk`).**
+Built on an everything-is-a-plugin architecture — tools, providers and behaviour all extend the same core. MIT licensed.
+
+`TypeScript` `Plugins` `Agent Harness` `Open Source`
+
+</td>
+<td width="50%" valign="top">
+
+### 🎮 Tetris — C++
+A **Tetris clone written in C++ from scratch** — game loop, block rotation, collision, line clearing and score tracking, with no engine underneath.
+
+`C++` `Game Development`
+
+*Completed 09/2025 · source not pushed yet*
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
 
 ### 🥚 The rest of the hoard
 Every egg, hatchling and full-grown wyrm lives in the repositories — including the portfolio you are one click away from.
