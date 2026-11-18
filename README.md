@@ -87,17 +87,6 @@ AI-powered workflows, tools and automation that make software genuinely more use
 <tr>
 <td width="50%" valign="top">
 
-### 💈 Roby Barber
-**Arabic-first Windows desktop app — a barber shop, end to end.**
-Queue, POS checkout with thermal receipts, payroll with commission/tips/advances, inventory with stock alerts, customer loyalty and WhatsApp integration. Fully offline: no server, no subscriptions. A custom Electron-run **226-check** smoke suite gates every release against real SQLite; **RSA-2048** machine-bound offline licensing with encrypted keys, clock-rollback detection and transfer protection; incremental backups every 10 minutes and on exit with one-click restore.
-
-`Electron` `SQLite` `Vanilla JS` `Offline Licensing` `Automated QA`
-
-*Freelance client build · 10/2026 – Present · source not public*
-
-</td>
-<td width="50%" valign="top">
-
 ### 🌙 [Luna-Quest](https://github.com/Mostafa-Taher-git/Luna-Quest)
 **A living Moon colony — three engines, one simulation.**
 30 Earth days on the Shackleton rim, every resource tied to the second. One shared C# core drives Godot .NET, Godot GDScript and Unity: deterministic one-second step, driveable crew rover under 1.62 m/s² lunar gravity, real CC0 / Poly Haven / NASA surface art. Guarded by 426 simulation checks, a 659-check headless self-test and a 238-check scene audit. English and Arabic.
@@ -105,8 +94,6 @@ Queue, POS checkout with thermal receipts, payroll with commission/tips/advances
 `C#` `GDScript` `Godot 4.7` `Unity 6.3` `Deterministic Sim` `QA`
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 ### <img width="24" height="24" alt="MKINDAYZIR_logo" src="https://github.com/user-attachments/assets/2ce22161-6064-4b75-b7a5-57cdaa27c96c" /> [Mkindayzir](https://github.com/Mostafa-Taher-git/Mkindayzir)
@@ -116,6 +103,8 @@ Project management, visual task boards, a knowledge vault and AI assistance in o
 `FastAPI` `SQLAlchemy 2.0` `PostgreSQL` `React` `Docker` `AES-256-GCM`
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 ### <img width="24" height="24" alt="icon" src="https://github.com/user-attachments/assets/9d8e1f5b-a3da-4c60-8834-6bfdbbc93477" />[LittleTech](https://github.com/Mostafa-Taher-git/LittleTech)
@@ -125,8 +114,6 @@ Project management, visual task boards, a knowledge vault and AI assistance in o
 `Flutter` `Dart` `Cubit` `Isar` `Rule Engine`
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 ### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/f854005d-2f49-4936-b30b-6e11e6f85b1d" /> [Greeneek](https://github.com/Mostafa-Taher-git/Greeneek)
@@ -136,19 +123,19 @@ Built on an everything-is-a-plugin architecture — tools, providers and behavio
 `TypeScript` `Plugins` `Agent Harness` `Open Source`
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
-### 🎮 Tetris — C++
+### 🎮 [Tetris — C++](https://github.com/Mostafa-Taher-git/Tetris--c--)
 A **Tetris clone written in C++ from scratch** — game loop, block rotation, collision, line clearing and score tracking, with no engine underneath.
 
 `C++` `Game Development`
 
-*Completed 09/2025 · source not pushed yet*
+*Completed 09/2025*
 
 </td>
-</tr>
-<tr>
-<td colspan="2" valign="top">
+<td width="50%" valign="top">
 
 ### 🥚 The rest of the hoard
 Every egg, hatchling and full-grown wyrm lives in the repositories — including the portfolio you are one click away from.
